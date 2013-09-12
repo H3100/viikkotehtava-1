@@ -12,6 +12,11 @@
     
         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Tehtävä1">HyperLink</asp:HyperLink>
     
+        <br />
+        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/H3100_localDBDemo.aspx">HyperLink</asp:HyperLink>
+        <br />
+        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Tehtävä1">HyperLink</asp:HyperLink>
+    
     </div>
     </form>
 </body>
