@@ -1,0 +1,108 @@
+﻿body {
+    width: 41em;
+    margin:0;
+    padding:0;
+}
+h1 {
+    font-size: 30px;
+    text-align: center;
+}
+h2 {
+    font-size: 22px;
+    text-align: center;
+}
+#form1{
+    border:2px solid;
+    border-radius:25px;
+    box-shadow: 10px 10px 5px #888888;
+}
+#laskeTasta{
+    text-decoration: none;
+    color: black;
+}
+.buttonHolder{
+    text-align: center;
+}
+/*
+#btnLuel{
+    float: right;
+}
+    */
+#margin{
+    margin: 1em;
+    /*
+    border-style:solid;
+    border-width:1px;
+    */
+}
+
+#vasen {
+    width: 19em;
+    clear: left;
+    float: left;
+}
+
+#oikea {
+    width: 19em;
+    float: left;
+}
+
+#lblIka{
+    clear: both;
+    float: left;
+}
+
+#lblPalkka{
+    clear: both;
+    float: left;
+}
+.clearLeft{
+    clear: left;
+    float: left;
+}
+
+
+#lakisaa{
+    width: 19em;
+    clear: both;
+    float: left;
+}
+#lblLakisaa{
+    clear: left;
+    float: left;
+}
+#lblLakisaaNbr {
+    clear: right;
+    float: right;
+}
+
+
+#elinaikana{
+    width: 19em;
+    clear: both;
+    float: left;
+}
+#lblElinaikak {
+    clear: left;
+    float: left;
+}
+#lblElinaikakNbr {
+    clear: right;
+    float: right;
+}
+
+
+#lblArvio{
+    clear: both;
+    float: left;
+}
+
+
+#riittaako{
+    clear: both;
+}
+
+#Virheet{
+    clear: both;
+    text-align: center;
+}

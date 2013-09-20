@@ -20,9 +20,9 @@
         <h2>Viikkotehtävät 1 ja 2</h2>
 
         <asp:TextBox ID="txtName" runat="server" Text="Tähän nimesi" ></asp:TextBox>
-        <asp:Button ID="Button1" runat="server" Text="Välitä parametrina" />
-        <asp:Button ID="Button2" runat="server" Text="Tallenna sessioon" />
-        <asp:Button ID="Button3" runat="server" Text="Tallenna Cookiehin" />
+        <asp:Button ID="Button1" runat="server" Text="Välitä parametrina" OnClick="Button1_Click" />
+        <asp:Button ID="Button2" runat="server" Text="Tallenna sessioon" OnClick="Button2_Click" />
+        <asp:Button ID="Button3" runat="server" Text="Tallenna Cookiehin" OnClick="Button3_Click" />
     
     </div>
 </asp:Content>
