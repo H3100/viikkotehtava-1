@@ -23,7 +23,9 @@
         <asp:Button ID="Button1" runat="server" Text="Välitä parametrina" OnClick="Button1_Click" />
         <asp:Button ID="Button2" runat="server" Text="Tallenna sessioon" OnClick="Button2_Click" />
         <asp:Button ID="Button3" runat="server" Text="Tallenna Cookiehin" OnClick="Button3_Click" />
-    
+
+        <h2>Viikon 39 tuntiharkat</h2>
+        <asp:HyperLink ID="HyperLink5" runat="server">Iän laskenta Calendar komponentilla</asp:HyperLink>
     </div>
 </asp:Content>
 
