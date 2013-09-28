@@ -30,6 +30,7 @@ public partial class H3100_TreeView : System.Web.UI.Page
     {
     }
 
+
     private void AddNode(XmlNode inXmlNode, TreeNode inTreeNode)
     {
         XmlNode xNode;
@@ -58,16 +59,25 @@ public partial class H3100_TreeView : System.Web.UI.Page
         lblTesti.Text = "File uploaded succesfully";
 
         String path = MappedApplicationPath +"Files/" +fu.FileName;
-        XmlDataDocument xmldoc = new XmlDataDocument();
+
+        XmlDocument xmldoc;
+        //XDocument xRoot = XDocument.Load(nodeReader, LoadOptions.SetLineInfo);
         XmlNode xmlnode;
+
         try
         {
 
         FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read);
+        //XmlReader xmlr = XmlReader.Create(fs);
+        xmldoc = new XmlDocument();
         xmldoc.Load(fs);
+
+        //xmlnode = xmldoc.Nodes[1];
         xmlnode = xmldoc.ChildNodes[1];
+        
         treeView.Nodes.Clear();
         treeView.Nodes.Add(new TreeNode(xmldoc.DocumentElement.Name));
+        //lblTesti.Text = xmldoc.DocumentElement.Name;
         TreeNode tNode;
         tNode = treeView.Nodes[0];
         AddNode(xmlnode, tNode);
