@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="H3100_MasterPage.master.cs" Inherits="H3100_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Tehtävä 3</title>
+    <link href="T3.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <img class="displayed" src="images/LogoVedos.png" /><form id="form1" runat="server">
+    &nbsp;<div class="navbar">
+    <ul class="navbar">
+        <li>
+            <a href="http://www.helsinki.fi/">Home</a>
+        </li>
+        <li>
+            <a href="http://www.helsinki.fi/">Products</a>
+        </li>
+        <li>
+            <a href="H3100_TreeView.aspx">Puunäkymä</a>
+        </li>
+        <li>
+            <a href="http://www.helsinki.fi/">About Us</a>
+        </li>
+        <li>
+            <a href="http://www.helsinki.fi/">Downloads</a>
+        </li>
+        <li>
+            <a href="http://www.helsinki.fi/">Links</a>
+        </li>
+        <li>
+            <a href="http://www.helsinki.fi/">Opintojakso</a>
+        </li>
+    </ul>
+    </div>
+    <div class="sisalto">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    <div class="both"><h2>Copyright Antti Tanskanen</h2></div>
+</body>
+</html>

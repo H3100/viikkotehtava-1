@@ -1,0 +1,1 @@
+﻿Ohjelmalla voi ladata XML-tiedoston ja tarkastella sen sisältöä.

@@ -1,0 +1,44 @@
+﻿body {
+background-color: rgb(240,248,255);
+font-family: Verdana, Arial, sans-serif;
+}
+a
+{
+text-decoration: none;
+}
+
+h1
+{
+text-align: center;
+color: rgb(100,149,237);
+line-height: 20%;
+}
+
+h2
+{
+text-align: center;
+color: green;
+line-height: 65%;
+}
+
+.navbar{
+    list-style-type: none;
+    width: 15%;
+    float: left;
+}
+
+.sisalto{
+    width: 70%;
+    float: left;
+}
+
+.both{
+    clear:both;
+}
+
+IMG.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+
+}
