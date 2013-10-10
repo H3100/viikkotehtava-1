@@ -13,17 +13,24 @@ public partial class H3100_finkino : System.Web.UI.Page
     string urlToMovies;
     protected void Page_Load(object sender, EventArgs e)
     {
+        
         urlToTheatres = ConfigurationManager.AppSettings["finnkinoteatterit"];
         urlToMovies = ConfigurationManager.AppSettings["finnkinoelokuvat"];
+        
     }
     protected void myListbox_SelectedIndexChanged(object sender, EventArgs e)
     {
-        string theatreShows = urlToMovies + myListbox.SelectedItem.Value;
+
+        string theatreShows = urlToMovies +myListbox.SelectedItem.Value;
+        lblTesti.Text = theatreShows;
         myDataSource.DataFile = theatreShows;
+        myRepeater.DataSource = myDataSource;
         myRepeater.DataBind();
+ 
     }
     protected void btnGetTheatres_Click(object sender, EventArgs e)
     {
+      
         //haetaan FinnKinon teatterit listboxiin
         XmlDocument doc = new XmlDocument();
         doc.Load(urlToTheatres);
@@ -33,5 +40,6 @@ public partial class H3100_finkino : System.Web.UI.Page
             ListItem li = new ListItem(node["Name"].InnerText, node["ID"].InnerText);
             myListbox.Items.Add(li);
         }
+      
     }
 }
