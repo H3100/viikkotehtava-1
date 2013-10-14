@@ -42,8 +42,12 @@ public partial class H3100_TreeView : System.Web.UI.Page
             nodeList = inXmlNode.ChildNodes;
             for (i = 0; i <= nodeList.Count - 1; i++)
             {
+                //tästä lisätään
                 xNode = inXmlNode.ChildNodes[i];
+                //lisäys
                 inTreeNode.ChildNodes.Add(new TreeNode(xNode.Name));
+
+                //tähän lisätään
                 tNode = inTreeNode.ChildNodes[i];
                 AddNode(xNode, tNode);
             }
@@ -72,13 +76,14 @@ public partial class H3100_TreeView : System.Web.UI.Page
         xmldoc = new XmlDocument();
         xmldoc.Load(fs);
 
-        //xmlnode = xmldoc.Nodes[1];
+        //tästä lisätään
         xmlnode = xmldoc.ChildNodes[1];
-        
+        //lblTesti.Text = xmlnode.InnerXml;
         treeView.Nodes.Clear();
         treeView.Nodes.Add(new TreeNode(xmldoc.DocumentElement.Name));
         //lblTesti.Text = xmldoc.DocumentElement.Name;
         TreeNode tNode;
+        // tähän lisätään
         tNode = treeView.Nodes[0];
         AddNode(xmlnode, tNode);
 
