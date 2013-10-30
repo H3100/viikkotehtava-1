@@ -23,6 +23,6 @@
     <asp:GridView ID="myGridview" runat="server"></asp:GridView>
     <asp:Table ID="myTable" runat="server"></asp:Table>
     <br />
-    <asp:Button ID="btntarkistamuutokset" runat="server" Text="Päivitä" />
+    <asp:Button ID="btntarkistamuutokset" runat="server" Text="Päivitä" OnClick="btntarkistamuutokset_Click" />
 </asp:Content>
 
