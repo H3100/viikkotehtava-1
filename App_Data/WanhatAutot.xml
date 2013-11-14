@@ -21,7 +21,7 @@
   <Auto>
     <aid>201</aid>
     <rekkari>AU-21</rekkari>
-    <merkki>Audi</merkki>
+    <merkki>Audiii</merkki>
     <malli>A3</malli>
     <vm>2009</vm>
     <myyntiHinta>30000</myyntiHinta>
@@ -30,7 +30,7 @@
   <Auto>
     <aid>171</aid>
     <rekkari>TM-25</rekkari>
-    <merkki>Porsche</merkki>
+    <merkki>Porsche2</merkki>
     <malli>911 SC</malli>
     <vm>1979</vm>
     <myyntiHinta>30000</myyntiHinta>
@@ -49,7 +49,7 @@
     <aid>912</aid>
     <rekkari>XLM-112</rekkari>
     <merkki>Volvo</merkki>
-    <malli>V40 1.8 Sportswag.</malli>
+    <malli>V40 1.8 Sportswagon</malli>
     <vm>1998</vm>
     <myyntiHinta>13450</myyntiHinta>
     <sisaanOstoHinta>4416</sisaanOstoHinta>

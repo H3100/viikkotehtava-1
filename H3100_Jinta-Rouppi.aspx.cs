@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
@@ -25,7 +27,20 @@ public partial class H3100_Jinta_Rouppi : System.Web.UI.Page
             return it;
         }
     }
-    
+    private string GetMD5Hash(string input)
+    {
+        System.Security.Cryptography.MD5CryptoServiceProvider x =
+            new System.Security.Cryptography.MD5CryptoServiceProvider();
+        byte[] bs = System.Text.Encoding.UTF8.GetBytes(input);
+        bs = x.ComputeHash(bs);
+        System.Text.StringBuilder s = new System.Text.StringBuilder();
+        foreach (byte b in bs)
+        {
+            s.Append(b.ToString("x2").ToLower());
+        }
+        string password = s.ToString();
+        return password;
+    }
     protected void Page_Init(object sender, System.EventArgs e)
     {
         // register css
@@ -66,16 +81,54 @@ public partial class H3100_Jinta_Rouppi : System.Web.UI.Page
     }
     protected void btnMuokkaa_Click(object sender, EventArgs e)
     {
-        try
+        /* // Ensimmäinen versio!
+        string user = WebConfigurationManager.AppSettings["username"].ToString();
+        string passwd = WebConfigurationManager.AppSettings["passwd"].ToString();
+        string user2 = Request["user"];
+        string passwd2 = Request["passwd"];
+        //lblIlmoitus.Text = Request["user"] + " " + Request["passwd"];
+        if (user2.Equals(user) && passwd2.Equals(passwd))
         {
-            string toBeRedirected = "./H3100_muokkaaAutot.aspx?aid=" +myListbox.SelectedItem.Value;
-            Response.Redirect(toBeRedirected);
+            try
+            {
+                string toBeRedirected = "~/H3100_muokkaaAutot.aspx?aid=" + myListbox.SelectedItem.Value;
+                Response.Redirect(toBeRedirected);
+            }
+            catch (Exception)
+            {
+                // Pitäisi ilmoittaak äyttäjälle, että on syytä valita jokin vaihtoehto ennen klikkausta
+                lblIlmoitus.Text = "Valitse jokin auto!";
+                throw;
+            }
         }
-        catch (Exception)
+        else
+            lblIlmoitus.Text = "Ei käyttäjäoikeuksia muokkaukseen!"; 
+         */
+        string user2 = Request["user"];
+        string passwd2 = Request["passwd"];
+
+        string path = MappedApplicationPath + "App_Data/" + "kayttajaJaSalasana.xml";
+        XmlDocument doc = new XmlDocument();
+        doc.Load(path);
+        XmlNodeList nodes = doc.SelectNodes("kayttajat/kayttaja");
+        //lblIlmoitus.Text = nodes.Item(0).SelectNodes("/kayttaja").Count.ToString();
+        for (int i = 0; i < nodes.Count; i++)
         {
-            // Pitäisi ilmoittaak äyttäjälle, että on syytä valita jokin vaihtoehto ennen klikkausta
-            throw;
+            //lblIlmoitus.Text += " " + i.ToString();
+            if (nodes[i].InnerText.Length > 0)
+            {
+                XmlNode node = nodes[i];
+                if (node["kayttajatunnus"].InnerText.Equals(user2) 
+                    && node["salasana"].InnerText.Equals(GetMD5Hash(passwd2+user2)))
+                {
+                    string toBeRedirected = "~/H3100_muokkaaAutot.aspx?aid=" 
+                                                + myListbox.SelectedItem.Value;
+                    Response.Redirect(toBeRedirected);
+                }
+            }
         }
+        lblIlmoitus.Text += "Ei muokkausoikeuksia.";
+      }
+         
         
-    }
 }

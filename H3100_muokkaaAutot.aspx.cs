@@ -53,6 +53,6 @@ public partial class H3100_muokkaaAutot : System.Web.UI.Page
         }
            
 
-        Response.Redirect("./H3100_Jinta-Rouppi.aspx");
+        Response.Redirect("~/H3100_Jinta-Rouppi.aspx");
     }
 }

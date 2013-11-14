@@ -5,5 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <asp:ListBox ID="myListbox" runat="server" Height="189px" Width="188px"></asp:ListBox>
     <asp:Button ID="btnMuokkaa" runat="server" OnClick="btnMuokkaa_Click" Text="Muokkaa" />
+    <br />
+    <asp:Label ID="lblIlmoitus" runat="server" Text=""></asp:Label>
 </asp:Content>
 

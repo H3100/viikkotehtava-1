@@ -32,6 +32,6 @@
     </asp:RegularExpressionValidator>
     <asp:Button ID="btnPaivita" runat="server" OnClick="btnPaivita_Click" Text="Päivitä" />
     <br />
-    <asp:Label ID="lblTesti" runat="server" Text="Label"></asp:Label>
+    <asp:Label ID="lblTesti" runat="server" Text=""></asp:Label>
 </asp:Content>
 

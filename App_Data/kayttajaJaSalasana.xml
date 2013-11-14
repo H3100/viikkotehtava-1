@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<kayttajat>
+    <kayttaja>
+      <kayttajatunnus>Rouppi</kayttajatunnus>
+      <salasana>Salakana</salasana>
+    </kayttaja>
+    <kayttaja>
+      <kayttajatunnus>testikayttaja</kayttajatunnus>
+      <salasana>salakana</salasana>
+    </kayttaja>
+    <kayttaja>
+      <kayttajatunnus>admin</kayttajatunnus>
+      <salasana>f6fdffe48c908deb0f4c3bd36c032e72</salasana>
+    </kayttaja>
+</kayttajat>
